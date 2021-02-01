@@ -21,7 +21,7 @@ class BusService:
             'FleetOver': fleetOver,
         }
         response = requests.post(url.URL_VEHICLE,headers=self.headers,data=data, verify=False)
-        return json.loads(response.text)
+        return json.loads(response.text)['dt']
     
     def getResultRoute(self,coordinate:dict):
         data = {
@@ -33,10 +33,10 @@ class BusService:
             'opts': '2'
         }
         response = requests.post(url.URL_ROUTE,headers=self.headers,data=data,verify=False)
-        return json.loads(response.text)
+        return json.loads(response.text)['dt']
     
-    def searchBusOfLocation(self,TypeId:int,key:str):
-        try:
+    def searchBusOfLocation(self,typeId:int,key:str):
+      
             data = {
             'act': 'searchfull',
             'typ': typeId,
@@ -44,8 +44,7 @@ class BusService:
             }
             response = requests.post(url.URL_SEARCH_LOCATION,headers=self.headers, data = data,verify=False)
             return json.loads(response.text)['dt']
-        except:
-            return []
+        
     
     def getBusStopList(self,fleetId:str,direction:str):
      
