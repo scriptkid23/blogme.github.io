@@ -1,6 +1,6 @@
 import requests
 import json
-from constants import url
+from app.constants import url
 
 class BusService:
     headers = {
@@ -42,6 +42,7 @@ class BusService:
             'typ': typeId,
             'key': key
             }
+            
             response = requests.post(url.URL_SEARCH_LOCATION,headers=self.headers, data = data,verify=False)
             return json.loads(response.text)['dt']
         

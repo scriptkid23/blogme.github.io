@@ -5,7 +5,7 @@ from starlette.middleware.cors import CORSMiddleware
 
 from app.api.errors.http_error import http_error_handler
 from app.api.errors.validation_error import http422_error_handler
-from app.api.routes.api import router as api_router
+from app.api.routes import router as api_router
 from app.core.config import ALLOWED_HOSTS, API_PREFIX, DEBUG, PROJECT_NAME, VERSION
 
 
