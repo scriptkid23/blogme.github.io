@@ -1,0 +1,25 @@
+{
+  "name": "learning-blockchain",
+  "version": "1.0.0",
+  "description": "learning blockchain",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptkid23/learning-blockchain.git"
+  },
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "hoando.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scriptkid23/learning-blockchain/issues"
+  },
+  "homepage": "https://github.com/scriptkid23/learning-blockchain#readme"
+}
